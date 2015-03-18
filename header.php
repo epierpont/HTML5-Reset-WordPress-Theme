@@ -78,9 +78,6 @@
 	    <script src="<?php echo get_template_directory_uri(); ?>/_/js/html5shiv.js"></script>
 	<![endif]-->
 
-	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
-    <script src="<?php echo get_template_directory_uri(); ?>/_/js/prefixfree.min.js"></script>
-
 	<!-- Application-specific meta tags -->
 	<?php
 		// Windows 8
