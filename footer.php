@@ -5,13 +5,9 @@
  * @since HTML5 Reset 2.0
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright" role="contentinfo">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
-		</footer>
 
-	</div>
 
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
 
 <!-- jQuery is called via the WordPress-friendly way via functions.php -->

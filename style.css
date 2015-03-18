@@ -13,8 +13,6 @@ Version: 2.0
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 body {font: 13px Helmet, Freesans, sans-serif;}
 
-/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
-
 /* We like off-black for text. */
 body, select, input, textarea {color: #333;}
 
@@ -36,24 +34,114 @@ input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
 
-/* And here begins the WordPress fun.
+
+/* responsive grid setup
 -------------------------------------------------------------------------------*/
 
-#wrapper {width: 960px; margin: 20px auto;}
+.grid {
+	display: block;
+	clear: both;
+}
 
+.grid .unit {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
 
-/* Print styles!
--------------------------------------------------------------------------------*/
-@media print {
+.grid .center {
+	margin: 0 auto;
+	float: none;
+}
 
+.grid { *zoom: 1; }
+
+.grid:before,
+.grid:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+
+.grid:after { clear: both; }
+
+.grid .w-1,
+.grid .w-2,
+.grid .w-3,
+.grid .w-4,
+.grid .w-5,
+.grid .w-6,
+.grid .w-7,
+.grid .w-8,
+.grid .w-9,
+.grid .w-10,
+.grid .w-11,
+.grid .w-12 {
+	width: 100%;
 }
 
 
-/* Media queries!
+
+/* base styles, we are going mobile first
 -------------------------------------------------------------------------------*/
 
-/* Always do mobile-first, and consider using em units: http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw
+.desktop { display: none; }
 
-@media screen and (min-width: 480px) {
+.mobile { display: block; }
 
-} */
+
+
+/* media queries
+-------------------------------------------------------------------------------*/
+
+/* mobile devices */
+@media only screen and (min-width: 481px) {
+	
+}
+
+
+/* tablet/desktop styles */
+@media only screen and (min-width: 768px) {
+	
+	/* responsive grid setup
+	-------------------------------------------------------------------------------*/
+	
+	.grid {
+		/* margin-left:-12px; - uncomment for padding */
+	}
+
+	.grid .unit {
+	    border:0px solid rgba(0,0,0,0);
+		/* border-left-width: 12px; - uncomment for padding */
+		padding: 0;
+	}
+	
+	.grid .w-1 { width:8.33333333333%; }
+	.grid .w-2 { width:16.6666666667%; }
+	.grid .w-3 { width:25.0%; }
+	.grid .w-4 { width:33.3333333333%; }
+	.grid .w-5 { width:41.6666666667%; }
+	.grid .w-6 { width:50.0%; }
+	.grid .w-7 { width:58.3333333333%; }
+	.grid .w-8 { width:66.6666666667%; }
+	.grid .w-9 { width:75.0%; }
+	.grid .w-10 { width:83.3333333333%; }
+	.grid .w-11 { width:91.6666666667%; }
+	.grid .w-12 { width:100%; margin-left:0; }
+	
+	.desktop { display: block; }
+	
+	.mobile { display: none; }
+	
+}
+
+
+/* full desktop devices */
+@media only screen and (min-width: 960px) {
+	
+}
