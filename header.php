@@ -74,10 +74,6 @@
 			echo '<link rel="apple-touch-icon" href="' . of_get_option("head_apple_touch_icon") . '">';
 	?>
 
-	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
-
 	<!--[if lt IE 9]>
 	    <script src="<?php echo get_template_directory_uri(); ?>/_/js/html5shiv.js"></script>
 	<![endif]-->
